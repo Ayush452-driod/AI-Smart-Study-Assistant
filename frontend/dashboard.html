@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Markdown parser for AI responses -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+<body>
+
+<div class="app">
+
+<header>
+    <div class="brand">AI Smart Study Assistant</div>
+    <div id="userMini"></div>
+    <button id="logout" class="btn small">Logout</button>
+</header>
+
+<section class="dashboard">
+
+<aside>
+    <button class="nav active" data-mode="explain">Ask AI</button>
+    <button class="nav" data-mode="notes">Notes</button>
+    <button class="nav" data-mode="quiz">Quiz</button>
+    <button class="nav" data-mode="history">History</button>
+    <a class="nav" href="profile.html">Profile</a>
+</aside>
+
+<main class="content">
+
+<h1 id="title">Ask AI</h1>
+<p id="subtitle">Ask any study question.</p>
+
+<div id="controls" class="panel">
+
+<textarea id="topic"
+placeholder="Example: Explain polymorphism in Java"></textarea>
+
+<div id="quizOptions" class="quiz-options hidden">
+
+    <select id="difficulty">
+        <option>easy</option>
+        <option selected>medium</option>
+        <option>hard</option>
+    </select>
+
+    <select id="count">
+        <option>5</option>
+        <option>10</option>
+    </select>
+
+</div>
+
+<button id="generate" class="btn primary">Ask AI</button>
+
+</div>
+
+<div id="result" class="result panel">
+    Your AI response will appear here.
+</div>
+
+</main>
+</section>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profile</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="profile-page">
+
+<a href="dashboard.html">← Dashboard</a>
+
+<div class="panel profile-card">
+
+<h1>My Profile</h1>
+
+<div id="avatar" class="avatar">👤</div>
+
+<input id="picture" type="file" accept="image/*" hidden>
+
+<button id="uploadBtn" class="btn secondary">
+Upload Picture
+</button>
+
+<button id="removeBtn" class="btn danger">
+Remove Picture
+</button>
+
+<label>Name</label>
+<input id="name">
+
+<label>Email</label>
+<input id="email" disabled>
+
+<button id="save" class="btn primary">
+Save Changes
+</button>
+
+<p id="message" class="message"></p>
+
+</div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
