@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - AI Smart Study Assistant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+        <div class="logo">
+            AI Smart Study Assistant
+        </div>
+
+        <div class="header-right">
+
+            <span id="userName">
+                Student
+            </span>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <button
+                class="sidebar-btn active"
+                data-page="ask">
+
+                🤖 Ask AI
+
+            </button>
+
+            <button
+                class="sidebar-btn"
+                data-page="notes">
+
+                📝 Notes
+
+            </button>
+
+            <button
+                class="sidebar-btn"
+                data-page="quiz">
+
+                📚 Quiz
+
+            </button>
+
+            <button
+                class="sidebar-btn"
+                data-page="history">
+
+                🕒 History
+
+            </button>
+
+            <a
+                href="profile.html"
+                class="sidebar-btn">
+
+                👤 Profile
+
+            </a>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+
+        <main class="main-content">
+
+            <div class="page-heading">
+
+                <h1 id="pageTitle">
+                    Ask AI
+                </h1>
+
+                <p id="pageSubtitle">
+                    Ask anything related to your studies.
+                </p>
+
+            </div>
+
+
+            <!-- AI INPUT -->
+
+            <section
+                id="aiSection"
+                class="content-card">
+
+                <textarea
+                    id="topicInput"
+                    placeholder="Example: Explain inheritance in Java...">
+                </textarea>
+
+
+                <!-- QUIZ OPTIONS -->
+
+                <div
+                    id="quizOptions"
+                    class="quiz-options hidden">
+
+                    <div>
+
+                        <label>
+                            Difficulty
+                        </label>
+
+                        <select id="difficulty">
+
+                            <option value="easy">
+                                Easy
+                            </option>
+
+                            <option
+                                value="medium"
+                                selected>
+
+                                Medium
+
+                            </option>
+
+                            <option value="hard">
+                                Hard
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Number of Questions
+                        </label>
+
+                        <select id="questionCount">
+
+                            <option value="5">
+                                5
+                            </option>
+
+                            <option value="10">
+                                10
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="generateBtn"
+                    class="btn primary-btn">
+
+                    Ask AI
+
+                </button>
+
+            </section>
+
+
+            <!-- RESULT -->
+
+            <section class="content-card result-card">
+
+                <h2>
+                    Result
+                </h2>
+
+                <div id="result">
+
+                    Your AI response will appear here.
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
