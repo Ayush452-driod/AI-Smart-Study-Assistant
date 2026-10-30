@@ -1,1 +1,17 @@
 application.properties
+
+# Maven build files
+backend/target/
+
+# Environment variables
+.env
+*.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Java compiled files
+*.class
+
+# Logs
